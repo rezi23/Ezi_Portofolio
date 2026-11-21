@@ -1,0 +1,163 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #050506;
+    color: #f5f2eb;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+  }
+}
+
+/* Broken White & Warm Alabaster Pearl Luxury Gradient Text */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f2eb 45%, #c5beb0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Subtle architectural grid backdrop with warm broken-white hairlines */
+.bg-studio-grid {
+  background-size: 72px 72px;
+  background-image:
+    linear-gradient(to right, rgba(245, 242, 235, 0.025) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 242, 235, 0.025) 1px, transparent 1px);
+}
+
+/* Luxury obsidian surface card with broken-white top specular highlight */
+.luxury-surface {
+  background: linear-gradient(180deg, rgba(17, 17, 19, 0.95) 0%, rgba(8, 8, 10, 0.98) 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(245, 242, 235, 0.14),
+    0 28px 60px -20px rgba(0, 0, 0, 0.88);
+}
+
+.luxury-surface-subtle {
+  background: linear-gradient(180deg, rgba(15, 15, 17, 0.9) 0%, rgba(9, 9, 11, 0.96) 100%);
+  box-shadow: inset 0 1px 0 0 rgba(245, 242, 235, 0.1);
+}
+
+/* Specular broken-white hairline divider */
+.gold-hairline {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(245, 242, 235, 0.45) 50%,
+    transparent 100%
+  );
+}
+
+/* Edge fade mask for marquee */
+.mask-horizontal-fade {
+  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 10%,
+    black 90%,
+    transparent 100%
+  );
+}
+
+/* Broken White Haute Atelier CTA button sheen */
+.btn-gold-luxury {
+  background: linear-gradient(135deg, #ffffff 0%, #f5f2eb 55%, #e2ddd2 100%);
+  color: #050506;
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.92),
+    0 8px 26px -6px rgba(245, 242, 235, 0.24);
+}
+
+.btn-gold-luxury:hover {
+  background: linear-gradient(135deg, #ffffff 0%, #faf8f3 55%, #ece7dd 100%);
+  box-shadow:
+    inset 0 1px 0 0 rgba(255, 255, 255, 1),
+    0 12px 32px -6px rgba(245, 242, 235, 0.38);
+}
+
+/* Subtle pulsing ring for interactive pins */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.75;
+  }
+
+  70% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1.55);
+    opacity: 0;
+  }
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 2.2s cubic-bezier(0.22, 1, 0.36, 1) infinite;
+}
+
+/* Marquee continuous scroll animation */
+@keyframes marquee-scroll {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  animation: marquee-scroll 36s linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .animate-pulse-ring {
+    animation: none;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Clean dark scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050506;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262523;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3d3b37;
+}

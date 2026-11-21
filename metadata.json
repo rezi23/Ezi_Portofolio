@@ -1,0 +1,6 @@
+{
+  "name": "Fachrezi — Digital Product & Web Portfolio",
+  "description": "Portofolio interaktif desain antarmuka, dashboard analitik, dan aplikasi web modern oleh Muhammad Fachrezi.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
