@@ -21,7 +21,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
       id: 'Principal UI/UX Design & Full Frontend Architecture',
       en: 'Principal UI/UX Design & Full Frontend Architecture',
     },
-    imageUrl: '/assets/aistudio/pictomatic-statistics.png',
+    imageUrl: './assets/aistudio/pictomatic-statistics.png',
     accentHex: '#22C55E',
     featured: true,
     summary: {
@@ -135,7 +135,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
           id: 'Main Board Overview — Pusat Visibilitas Seluruh Operasional Booth',
           en: 'Main Board Overview — Full-Spectrum Booth Operations Visibility',
         },
-        imageUrl: '/assets/aistudio/pictomatic-overview.png',
+        imageUrl: './assets/aistudio/pictomatic-overview.png',
         description: {
           id: 'Halaman utama (Main Board) yang merangkum seluruh denyut operasional jaringan photobooth dalam satu layar terpadu. Manajemen dapat memeriksa rasio booth aktif dari total keseluruhan booth, memfilter performa berdasarkan tanggal spesifik maupun rentang waktu (Hari, Minggu, Bulan), serta memantau metrik finansial dan aktivitas fisik mesin secara simultan tanpa perlu berpindah tab.',
           en: 'The primary executive command board summarizing the entire photobooth network pulse on a single screen. Management can inspect active-to-total booth ratios, filter performance by specific dates or period granularity (Day, Week, Month), and monitor financial and physical machine activity simultaneously.',
@@ -217,7 +217,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
           id: 'Statistik Pendapatan Harian — Monitoring Omzet & Performa Real-Time',
           en: 'Daily Revenue Statistics — Real-Time Turnover & Performance Monitoring',
         },
-        imageUrl: '/assets/aistudio/pictomatic-statistics.png',
+        imageUrl: './assets/aistudio/pictomatic-statistics.png',
         description: {
           id: 'Modul analitik mendalam yang dirancang agar pemilik bisnis dan tim manajemen dapat memonitor pergerakan pendapatan harian secara real-time setiap hari. Menyajikan korelasi antara lonjakan pendapatan bulanan, distribusi transaksi dari Senin hingga Minggu, persentase pertumbuhan antar-periode, hingga peringkat kontribusi setiap cabang dan metadata pelanggan.',
           en: 'In-depth analytics module engineered for business owners and operations leads to monitor daily revenue movements in real time every day. Correlates monthly revenue spikes, Monday-through-Sunday daily transaction bars, period-over-period growth percentages, per-branch contribution rankings, and customer metadata.',
@@ -299,7 +299,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
           id: 'Manajemen Transaksi — Rekonsiliasi Pendapatan Kiosk & Audit Harian',
           en: 'Transaction Management — Kiosk Revenue Reconciliation & Daily Audit',
         },
-        imageUrl: '/assets/aistudio/pictomatic-transaction.png',
+        imageUrl: './assets/aistudio/pictomatic-transaction.png',
         description: {
           id: 'Modul pembukuan dan transparansi transaksi yang memisahkan rekapitulasi performa finansial per unit mesin kiosk dengan log rincian transaksi harian. Dirancang khusus untuk memudahkan tim keuangan melakukan rekonsiliasi Gross Income dari harga paket kiosk maupun penggunaan voucher yang berhasil, serta memverifikasi Net Income terhadap penyedia pembayaran (biller).',
           en: 'Financial transparency and ledger module separating per-kiosk revenue rollups from granular daily transaction logs. Purpose-built for finance teams to reconcile Gross Income across kiosk pricing and successful voucher redemptions while verifying Net Income against payment billers.',
@@ -381,7 +381,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
           id: 'Input Transaksi Kasir — Terminal POS Manual dengan Pratinjau Struk Live',
           en: 'POS Cashier Transaction Input — Manual Terminal with Live Receipt Preview',
         },
-        imageUrl: '/assets/aistudio/pictomatic-kasir.png',
+        imageUrl: './assets/aistudio/pictomatic-kasir.png',
         description: {
           id: 'Antarmuka Point of Sale (POS) khusus petugas kasir untuk mencatat transaksi pengunjung secara manual atau tunai di lokasi booth. Setiap transaksi yang diinput melalui halaman ini langsung tersinkronisasi secara real-time ke grafik pendapatan dan tabel transaksi di Dashboard utama, menghilangkan risiko selisih pencatatan manual.',
           en: 'Dedicated Point of Sale (POS) interface for booth cashiers to record walk-in or cash visitor transactions. Every entry submitted through this terminal syncs immediately in real time to the main dashboard revenue charts and transaction logs, eliminating manual bookkeeping discrepancies.',
@@ -463,7 +463,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
           id: 'Manajemen Frame — Pengelolaan & Distribusi Frame Baru ke Setiap Photobooth',
           en: 'Frame Management — Uploading & Distributing New Frames to Every Photobooth',
         },
-        imageUrl: '/assets/aistudio/pictomatic-frame.png',
+        imageUrl: './assets/aistudio/pictomatic-frame.png',
         description: {
           id: 'Pusat kendali aset frame foto cetak yang memungkinkan tim operasional menambahkan desain frame baru ke setiap unit photobooth agar pengunjung dapat langsung memilih dan memakainya saat sesi foto berlangsung. Mendukung manajemen ukuran cetak, konfigurasi jumlah slot foto per frame, pelacakan popularitas pemakaian selama 30 hari terakhir, hingga distribusi serentak ke banyak kiosk.',
           en: 'Centralized print-frame management system enabling operations teams to add new frame designs to every photobooth kiosk so visitors can immediately select and use them during photo sessions. Supports print size variants, photo-slot configuration, 30-day usage tracking, and multi-kiosk distribution.',
@@ -545,7 +545,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
           id: 'Frame GIF — Konfigurasi Tautan Bundle Animasi GIF untuk Setiap Kiosk',
           en: 'Frame GIF — Per-Kiosk Animated GIF Frame Bundle Configuration',
         },
-        imageUrl: '/assets/aistudio/pictomatic-frame-gif.png',
+        imageUrl: './assets/aistudio/pictomatic-frame-gif.png',
         description: {
           id: 'Selain cetakan fisik, pengunjung photobooth modern sangat menyukai salinan digital berbentuk animasi gerak (GIF). Modul Daftar Frame GIF ini memudahkan tim teknis dan operasional mengatur, memetakan, dan memperbarui tautan bundle animasi Frame GIF secara spesifik untuk masing-masing mesin kiosk dari jarak jauh.',
           en: 'Beyond physical prints, modern photobooth visitors love animated digital keepsakes (GIFs). The Frame GIF module enables technical and operations teams to remotely configure, map, and update animated GIF frame bundle links for each individual kiosk machine.',
@@ -614,7 +614,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
           id: 'Studio Stiker Digital — Manajemen Aset Dekorasi, Kategori Pack & Simulasi Live',
           en: 'Digital Sticker Studio — Decoration Asset CMS, Themed Packs & Live Simulator',
         },
-        imageUrl: '/assets/aistudio/pictomatic-sticker.jpg',
+        imageUrl: './assets/aistudio/pictomatic-sticker.jpg',
         description: {
           id: 'Modul pengelolaan aset stiker digital interaktif yang memungkinkan pengunjung menghias foto mereka di layar sentuh kiosk photobooth. Tim kreatif dapat mengelola 16+ stiker aktif yang dikelompokkan ke dalam 6 kategori Sticker Packs tematik, memantau frekuensi pemakaian setiap stiker secara presisi (total 22.900x ditempel oleh pengunjung), mendistribusikannya ke seluruh kiosk, hingga melakukan simulasi penempelan stiker di foto sebelum dipublikasikan.',
           en: 'Interactive digital sticker asset management module empowering visitors to customize their photos on kiosk touchscreens. Creative teams manage 16+ active stickers organized across 6 themed Sticker Packs, track exact placement analytics (22,900+ total visitor placements), distribute packs across kiosks, and test sticker placement on sample photos prior to deployment.',
@@ -710,7 +710,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
       id: 'Product Design & Full Frontend Build',
       en: 'Product Design & Full Frontend Build',
     },
-    imageUrl: '/assets/aistudio/image_4731c564.png',
+    imageUrl: './assets/aistudio/image_4731c564.png',
     accentHex: '#4F46E5',
     featured: true,
     summary: {
@@ -820,7 +820,7 @@ export const INITIAL_PROJECTS: ProjectItem[] = [
       id: 'UI Design & Frontend Engineering',
       en: 'UI Design & Frontend Engineering',
     },
-    imageUrl: '/assets/aistudio/image_2a6bab41.png',
+    imageUrl: './assets/aistudio/image_2a6bab41.png',
     accentHex: '#10B981',
     featured: true,
     summary: {

@@ -1,0 +1,58 @@
+name: Deploy Vite React Portfolio to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build production bundle
+        run: npm run build
+
+      - name: Copy index.html to 404.html for SPA fallback
+        run: cp dist/index.html dist/404.html && touch dist/.nojekyll
+
+      - name: Deploy to gh-pages branch (for "Deploy from a branch -> gh-pages")
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+
+      - name: Setup GitHub Pages (for "Source -> GitHub Actions")
+        uses: actions/configure-pages@v5
+        continue-on-error: true
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        continue-on-error: true
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages Actions
+        id: deployment
+        uses: actions/deploy-pages@v4
+        continue-on-error: true
