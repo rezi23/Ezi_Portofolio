@@ -650,4 +650,12 @@ export function HeroSection({
               </p>
               <p className="mt-1 text-xs sm:text-sm font-semibold text-[#F5F2EB]">
                 {metric.label}
-           
+              </p>
+              <p className="mt-0.5 text-[11px] text-[#A8A298]">{metric.note}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
