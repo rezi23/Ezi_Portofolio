@@ -65,8 +65,8 @@ export function ContactSection({ locale }: ContactSectionProps) {
           className="pointer-events-none absolute -bottom-32 left-1/3 h-[460px] w-[620px] rounded-full bg-[#F5F2EB]/[0.045] blur-[150px]"
         />
 
-        <div className="mx-auto max-w-[1360px] px-6 py-24 lg:px-10 lg:py-32">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
+        <div className="mx-auto max-w-[1380px] px-5 py-16 lg:px-8 lg:py-20">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-12">
             {/* Left Editorial Pitch & Direct Concierge Card */}
             <div className="flex flex-col justify-between lg:col-span-5">
               <div>

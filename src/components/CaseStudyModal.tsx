@@ -454,8 +454,8 @@ export function CaseStudyModal({
                       </span>
                       <h3 className="mt-1 font-display text-xl font-bold text-[#F5F2EB] sm:text-2xl">
                         {locale === 'id'
-                          ? `7 Modul Inti Ekosistem ${project.title}`
-                          : `7 Core Modules of the ${project.title} Ecosystem`}
+                          ? `${modules.length} Modul Inti Ekosistem ${project.title}`
+                          : `${modules.length} Core Modules of the ${project.title} Ecosystem`}
                       </h3>
                     </div>
                     <p className="text-xs text-[#A8A298]">

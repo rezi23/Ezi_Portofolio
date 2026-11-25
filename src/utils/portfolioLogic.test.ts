@@ -164,3 +164,54 @@ test('Pictomatic project includes all 7 operational & creative modules with hots
     assert.ok(mod.hotspots.length >= 3);
   }
 });
+
+test('Generator BAST Adabtiv project includes all 4 wizard stage modules with hotspots', () => {
+  const bast = INITIAL_PROJECTS.find((p) => p.id === 'adabtiv-bast-generator');
+  assert.ok(bast, 'Generator BAST Adabtiv project should exist');
+  assert.ok(bast.modules, 'BAST modules should be defined');
+  assert.equal(bast.modules.length, 4);
+
+  const expectedBastModuleIds = [
+    'info-campaign',
+    'pihak-legal',
+    'deliverables-nilai',
+    'bukti-tayang',
+  ];
+  assert.deepEqual(
+    bast.modules.map((m) => m.id),
+    expectedBastModuleIds
+  );
+
+  for (const mod of bast.modules) {
+    assert.ok(mod.title.id.length > 10);
+    assert.ok(mod.description.id.length > 40);
+    assert.ok(mod.capabilities.length >= 3);
+    assert.ok(mod.hotspots.length >= 4);
+  }
+});
+
+test('Adabtiv SPK Generator project includes all 5 accordion section modules with hotspots', () => {
+  const spk = INITIAL_PROJECTS.find((p) => p.id === 'adabtiv-spk-generator');
+  assert.ok(spk, 'Adabtiv SPK Generator project should exist');
+  assert.ok(spk.modules, 'SPK modules should be defined');
+  assert.equal(spk.modules.length, 5);
+
+  const expectedSpkModuleIds = [
+    'info-campaign-spk',
+    'pihak-pertama-klien',
+    'pihak-kedua-adabtiv',
+    'statement-of-work',
+    'nilai-kontrak-termin',
+  ];
+  assert.deepEqual(
+    spk.modules.map((m) => m.id),
+    expectedSpkModuleIds
+  );
+
+  for (const mod of spk.modules) {
+    assert.ok(mod.title.id.length > 10);
+    assert.ok(mod.description.id.length > 40);
+    assert.ok(mod.capabilities.length >= 3);
+    assert.ok(mod.hotspots.length >= 4);
+  }
+});

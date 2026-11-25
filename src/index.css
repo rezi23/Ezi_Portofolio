@@ -7,11 +7,45 @@
   --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
 }
 
+/* ============================================================================
+   THREE-LAYER DESIGN TOKEN ARCHITECTURE (W3C DTCG Aligned)
+   Theme: Haute Obsidian Black & Warm Broken White (Alabaster Ivory)
+   ============================================================================ */
+:root {
+  /* Layer 1: Primitive Tokens */
+  --primitive-obsidian-950: #040405;
+  --primitive-obsidian-900: #08080a;
+  --primitive-obsidian-850: #0c0c10;
+  --primitive-obsidian-800: #121217;
+  --primitive-ivory-50: #ffffff;
+  --primitive-ivory-100: #f5f2eb;
+  --primitive-ivory-200: #e6e0d4;
+  --primitive-ivory-300: #cfc8b8;
+  --primitive-stone-400: #a8a298;
+  --primitive-stone-500: #7d776d;
+
+  /* Layer 2: Semantic Tokens */
+  --color-bg-canvas: var(--primitive-obsidian-950);
+  --color-bg-elevated: var(--primitive-obsidian-900);
+  --color-bg-panel: var(--primitive-obsidian-850);
+  --color-fg-primary: var(--primitive-ivory-100);
+  --color-fg-secondary: var(--primitive-ivory-200);
+  --color-fg-muted: var(--primitive-stone-400);
+  --color-border-subtle: rgba(245, 242, 235, 0.09);
+  --color-border-strong: rgba(245, 242, 235, 0.22);
+
+  /* Layer 3: Component Tokens */
+  --card-radius: 1.25rem;
+  --card-border: var(--color-border-subtle);
+  --btn-primary-bg: var(--primitive-ivory-100);
+  --btn-primary-fg: var(--primitive-obsidian-950);
+}
+
 @layer base {
   html {
     font-family: var(--font-sans);
-    background-color: #050506;
-    color: #f5f2eb;
+    background-color: var(--color-bg-canvas);
+    color: var(--color-fg-primary);
   }
 
   h1,
@@ -20,34 +54,40 @@
   h4 {
     font-family: var(--font-display);
   }
+
+  button,
+  [role="button"],
+  a {
+    cursor: pointer;
+  }
 }
 
 /* Broken White & Warm Alabaster Pearl Luxury Gradient Text */
 .text-gold-gradient {
-  background: linear-gradient(135deg, #ffffff 0%, #f5f2eb 45%, #c5beb0 100%);
+  background: linear-gradient(135deg, #ffffff 0%, #f5f2eb 48%, #bfb8a8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
-/* Subtle architectural grid backdrop with warm broken-white hairlines */
+/* Precision Architectural Grid Backdrop */
 .bg-studio-grid {
-  background-size: 72px 72px;
+  background-size: 56px 56px;
   background-image:
-    linear-gradient(to right, rgba(245, 242, 235, 0.025) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(245, 242, 235, 0.025) 1px, transparent 1px);
+    linear-gradient(to right, rgba(245, 242, 235, 0.024) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(245, 242, 235, 0.024) 1px, transparent 1px);
 }
 
-/* Luxury obsidian surface card with broken-white top specular highlight */
+/* Monumental Obsidian Surface Card with Specular Broken-White Top Edge */
 .luxury-surface {
-  background: linear-gradient(180deg, rgba(17, 17, 19, 0.95) 0%, rgba(8, 8, 10, 0.98) 100%);
+  background: linear-gradient(180deg, rgba(16, 16, 20, 0.96) 0%, rgba(7, 7, 9, 0.99) 100%);
   box-shadow:
-    inset 0 1px 0 0 rgba(245, 242, 235, 0.14),
-    0 28px 60px -20px rgba(0, 0, 0, 0.88);
+    inset 0 1px 0 0 rgba(245, 242, 235, 0.16),
+    0 24px 52px -18px rgba(0, 0, 0, 0.92);
 }
 
 .luxury-surface-subtle {
-  background: linear-gradient(180deg, rgba(15, 15, 17, 0.9) 0%, rgba(9, 9, 11, 0.96) 100%);
+  background: linear-gradient(180deg, rgba(14, 14, 18, 0.92) 0%, rgba(8, 8, 10, 0.97) 100%);
   box-shadow: inset 0 1px 0 0 rgba(245, 242, 235, 0.1);
 }
 
@@ -56,19 +96,19 @@
   background: linear-gradient(
     90deg,
     transparent 0%,
-    rgba(245, 242, 235, 0.45) 50%,
+    rgba(245, 242, 235, 0.5) 50%,
     transparent 100%
   );
 }
 
 /* Edge fade mask for marquee */
 .mask-horizontal-fade {
-  mask-image: linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(
     to right,
     transparent 0%,
-    black 10%,
-    black 90%,
+    black 8%,
+    black 92%,
     transparent 100%
   );
 }
@@ -76,17 +116,17 @@
 /* Broken White Haute Atelier CTA button sheen */
 .btn-gold-luxury {
   background: linear-gradient(135deg, #ffffff 0%, #f5f2eb 55%, #e2ddd2 100%);
-  color: #050506;
+  color: #040405;
   box-shadow:
-    inset 0 1px 0 0 rgba(255, 255, 255, 0.92),
-    0 8px 26px -6px rgba(245, 242, 235, 0.24);
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.95),
+    0 6px 22px -6px rgba(245, 242, 235, 0.25);
 }
 
 .btn-gold-luxury:hover {
   background: linear-gradient(135deg, #ffffff 0%, #faf8f3 55%, #ece7dd 100%);
   box-shadow:
     inset 0 1px 0 0 rgba(255, 255, 255, 1),
-    0 12px 32px -6px rgba(245, 242, 235, 0.38);
+    0 10px 28px -6px rgba(245, 242, 235, 0.4);
 }
 
 /* Subtle pulsing ring for interactive pins */
@@ -123,7 +163,7 @@
 }
 
 .animate-marquee {
-  animation: marquee-scroll 36s linear infinite;
+  animation: marquee-scroll 34s linear infinite;
   will-change: transform;
 }
 
@@ -150,14 +190,14 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #050506;
+  background: #040405;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #262523;
+  background: #242320;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #3d3b37;
+  background: #3a3833;
 }
